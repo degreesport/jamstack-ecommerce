@@ -1,30 +1,204 @@
 import uuid from 'uuid/v4'
 
 let inventory = [
-  { categories: ['new arrivals'], name: 'Timber Gray Mug', price: '1000', image: '../images/products/Mug1.jpg', description: 'Stay a while. The Timber charme chocolat Mug is set atop an oak trim and flaunts fluffy leather back and Mug cushions. Over time, this brown leather Mug’s full-aniline upholstery will develop a worn-in vintage look. Snuggle up with your cutie (animal or human) and dive into a bowl of popcorn. This Mug is really hard to leave. Natural color variations, wrinkles and creases are part of the unique characteristics of this leather. It will develop a relaxed vintage look with regular use.', brand: 'Jason Bourne', currentInventory: 4 },
-  { categories: ['Mugs', 'living room'], name: 'Carmel Brown Mug', price: '1000', image: '../images/products/Mug5.jpg', description: 'Stay a while. The Timber charme chocolat Mug is set atop an oak trim and flaunts fluffy leather back and Mug cushions. Over time, this brown leather Mug’s full-aniline upholstery will develop a worn-in vintage look. Snuggle up with your cutie (animal or human) and dive into a bowl of popcorn. This Mug is really hard to leave. Natural color variations, wrinkles and creases are part of the unique characteristics of this leather. It will develop a relaxed vintage look with regular use.' , brand: 'Jason Bourne' , currentInventory: 2 },
-  { categories: ['new arrivals', 'Mugs'], name: 'Mod Leather Mug', price: '800', image: '../images/products/Mug6.jpg', description: 'Easy to love. The Sven in birch ivory looks cozy and refined, like a sweater that a fancy lady wears on a coastal vacation. This ivory loveMug has a tufted bench Mug, loose back pillows and bolsters, solid walnut legs, and is ready to make your apartment the adult oasis you dream of. Nestle it with plants, an ottoman, an accent Mug, or 8 dogs. Your call.', brand: 'Jason Bourne', currentInventory: 8 },
-  { categories: ['new arrivals', 'Mugs'], name: 'Thetis Gray Love Mug', price: '900', image: '../images/products/Mug7.jpg', description: 'You know your dad’s incredible vintage bomber jacket? The Nirvana dakota tan leather Mug is that jacket, but in Mug form. With super-plush down-filled cushions, a corner-blocked wooden frame, and a leather patina that only gets better with age, the Nirvana will have you looking cool and feeling peaceful every time you take a Mug. Looks pretty great with a sheepskin throw, if we may say so. With use, this leather will become softer and more wrinkled and the cushions will take on a lived-in look, like your favorite leather jacket.' , brand: 'Jason Bourne', currentInventory: 10},
-  { categories: ['on sale', 'Mugs'], name: 'Sven Tan Matte', price: '1200', image: '../images/products/Mug8.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne' , currentInventory: 7 },
-  { categories: ['on sale', 'Mugs'], name: 'Otis Malt Mug', price: '500', image: '../images/products/Mug9.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 13},
-  { categories: ['on sale', 'Mugs'], name: 'Ceni Brown 3 Muger', price: '650', image: '../images/products/Mug10.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 9},
-  { categories: ['Mugs', 'living room'], name: 'Jameson Jack Lounger', price: '1230', image: '../images/products/Mug11.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 24 },
-
-  { categories: ['Mugs'], name: 'Galaxy Blue Mug', price: '800', image: '../images/products/Mug2.jpg', description: 'Easy to love. The Sven in birch ivory looks cozy and refined, like a sweater that a fancy lady wears on a coastal vacation. This ivory loveMug has a tufted bench Mug, loose back pillows and bolsters, solid walnut legs, and is ready to make your apartment the adult oasis you dream of. Nestle it with plants, an ottoman, an accent Mug, or 8 dogs. Your call.', brand: 'Jason Bourne', currentInventory: 43 },
-  { categories: ['new arrivals', 'Mugs'], name: 'Markus Green Love Mug', price: '900', image: '../images/products/Mug3.jpg', description: 'You know your dad’s incredible vintage bomber jacket? The Nirvana dakota tan leather Mug is that jacket, but in Mug form. With super-plush down-filled cushions, a corner-blocked wooden frame, and a leather patina that only gets better with age, the Nirvana will have you looking cool and feeling peaceful every time you take a Mug. Looks pretty great with a sheepskin throw, if we may say so. With use, this leather will become softer and more wrinkled and the cushions will take on a lived-in look, like your favorite leather jacket.', brand: 'Jason Bourne' , currentInventory: 2},
-  { categories: ['on sale', 'Mugs'], name: 'Dabit Matte Black', price: '1200', image: '../images/products/Mug4.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', currentInventory: 14 },
-
-  { categories: ['on sale', 'Mugs'], name: 'Embrace Blue', price: '300', image: '../images/products/Mug1.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 12 },
-  { categories: ['on sale', 'Mugs'], name: 'Nord Lounger', price: '825', image: '../images/products/Mug2.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 13},
-  { categories: ['on sale', 'Mugs'], name: 'Ceni Matte Oranve', price: '720', image: '../images/products/Mug3.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 33},
-  { categories: ['on sale', 'Mugs'], name: 'Abisko Green Recliner', price: '2000', image: '../images/products/Mug4.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 23 },
-  { categories: ['on sale', 'Mugs'], name: 'Denim on Denim Single', price: '1100', image: '../images/products/Mug5.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.' , brand: 'Jason Bourne', currentInventory: 13},
-  { categories: ['on sale', 'Mugs'], name: 'Levo Tan Lounge Mug', price: '600', image: '../images/products/Mug6.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 15 },
-
-  { categories: ['on sale', 'Mugs'], name: 'Anime Tint Recliner', price: '775', image: '../images/products/Mug7.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 44 },
-  { categories: ['on sale', 'Mugs'], name: 'Josh Jones Red Mug', price: '1200', image: '../images/products/Mug8.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 17 },
-  { categories: ['on sale', 'Mugs'], name: 'Black Sand Lounge', price: '1600', image: '../images/products/Mug9.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 28 },
-  { categories: ['on sale', 'Mugs'], name: 'Mint Beige WorkMug', price: '550', image: '../images/products/Mug10.jpg', description: 'You don’t have to go outside to be rugged. The Cigar rawhide Mug features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather Mug is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.', brand: 'Jason Bourne', currentInventory: 31 },  // { 
+  {
+   categories: ['custom artwork'],
+   name: 'Custom Painted Pet Mug - Style 2',
+   price: '29.99',
+   image: '../images/products/mug1.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['custom artwork'],
+   name: 'Custom Painted Pet Mug - Style 1',
+   price: '29.99',
+   image: '../images/products/mug2.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['custom artwork'],
+   name: 'Custom Painted Pet Mug - Style 2',
+   price: '29.99',
+   image: '../images/products/mug3.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['custom artwork'],
+   name: 'Custom Painted Pet Mug - Style 1',
+   price: '29.99',
+   image: '../images/products/mug4.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['custom artwork', 'multi pet'],
+   name: 'Custom Painted 2 Pets Mug',
+   price: '29.99',
+   image: '../images/products/mug5.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['custom artwork', 'multi pet'],
+   name: 'Custom Painted 3 Pets Mug',
+   price: '29.99',
+   image: '../images/products/mug6.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['custom artwork', 'multi pet'],
+   name: 'Custom Painted 4 Pets Mug',
+   price: '29.99',
+   image: '../images/products/mug7.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['dog', 'pets name', 'labrador'],
+   name: 'Labrador Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug8.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['dog', 'pets name', 'golden'],
+   name: 'Golden Retriver Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug9.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['dog', 'pets name', 'husky'],
+   name: 'Husky Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug10.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['dog', 'pets name', 'bulldog'],
+   name: 'Bulldog Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug11.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['dog', 'pets name', 'shepard'],
+   name: 'German Shepard Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug12.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['dog', 'pets name', 'pug'],
+   name: 'Pug Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug13.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['dog', 'pets name', 'wiener'],
+   name: 'Wiener Mug W Custom Name',
+   price: '24.99',
+   image: '../images/products/mug14.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+  {
+   categories: ['cat', 'pets name'],
+   name: 'Cat Mug W Custom Name - Style 1',
+   price: '24.99',
+   image: '../images/products/mug15.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['cat', 'pets name'],
+   name: 'Cat Mug W Custom Name - Style 2',
+   price: '24.99',
+   image: '../images/products/mug16.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['cat', 'pets name'],
+   name: 'Cat Mug W Custom Name - Style 3',
+   price: '24.99',
+   image: '../images/products/mug17.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+  {
+   categories: ['cat', 'funny', 'pre designed'],
+   name: 'Cat Lady Mug',
+   price: '19.99',
+   image: '../images/products/mug18.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['cat', 'funny', 'pre designed'],
+   name: 'Kitten Pun Mug',
+   price: '19.99',
+   image: '../images/products/mug19.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['cat', 'funny', 'pre designed'],
+   name: 'Cat Persons Will Mug',
+   price: '19.99',
+   image: '../images/products/mug20.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
+ {
+   categories: ['dog', 'funny', 'pre designed'],
+   name: 'Dog Mom Mug',
+   price: '19.99',
+   image: '../images/products/mug21.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 299
+ },
+ {
+   categories: ['dog', 'funny', 'pre designed'],
+   name: 'Dog Father Mug',
+   price: '19.99',
+   image: '../images/products/mug22.jpg',
+   description: 'Our artist will turn any picture of your pet into piece of beautiful artwork for you to display on one of our high quality ceramic mugs.',
+   brand: 'mugPaw',
+   currentInventory: 300
+ },
 ]
 
 inventory.map(i => {
